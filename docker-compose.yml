@@ -13,6 +13,8 @@ services:
     container_name: mongo-express
     ports:
       - ${PORT_MONGO_EXPRESS}:8081
+    depends_on:
+      - mongodb
     environment:
       - ME_CONFIG_MONGODB_SERVER=mongodb
       - ME_CONFIG_MONGODB_PORT=${PORT_MONGODB}
