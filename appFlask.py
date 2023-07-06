@@ -6,7 +6,7 @@ client = MongoClient('mongodb://host.docker.internal:27017/',username='root',pas
 db = client[Bdd_user]
 collection = db[users]
 
-app = Flask(__name__)
+app = Flask(__name_ _)
 
 @app.route('/users', methods=['POST'])
 def create_user():
