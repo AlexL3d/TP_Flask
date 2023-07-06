@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 
 # # Connexion à la base de données MongoDB
-client = MongoClient('mongodb://localhost:27017/',username='root',password='root',authSource='admin')
+client = MongoClient('mongodb://host.docker.internal:27017/',username='root',password='root',authSource='admin')
 db = client[Bdd_user]
 collection = db[users]
 
